@@ -81,7 +81,7 @@ export default function Home() {
                   <div className="text-base text-white font-ProjectLine h-full  ">
                     <p className="text-2xl text-center">
                       Hey!<br />
-                      I'm a full-stack web<br />
+                      I&apos;m a full-stack web<br />
                       developer who creats websites.
                     </p>
                   </div>
@@ -191,7 +191,7 @@ export default function Home() {
             <div className="flex flex-col items-end">
               {/* Arrow pointing to phone */}
               <div className='flex items-end h-full'>
-                <img src="/arrowAnimation.gif" className="w-24 h-24 rotate-90 " alt="Arrow animation" />
+                <Image width={100} height={100} src="/arrowAnimation.gif" className="w-24 h-24 rotate-90 " alt="Arrow animation" />
               </div>
               </div>
               {/* Phone mockup */}
@@ -262,12 +262,12 @@ export default function Home() {
       <div className="flex flex-col">
         {/* First Testimonial */}
         <div className="bg-purple-500 text-white p-8 md:p-12 relative">
-          <div className="text-6xl text-white/30 absolute top-6 left-6">"</div>
+          <div className="text-6xl text-white/30 absolute top-6 left-6">&quot;</div>
           <div className="flex flex-col h-full justify-between">
             <div className="relative z-10 mb-6">
               <p className="text-lg">
                 Since 2018 Tamal has been responsible for the development of our website which has been instrumental to
-                the growth of our company. Even while working remotely he's been highly responsive, organized and
+                the growth of our company. Even while working remotely he&apos;s been highly responsive, organized and
                 strategic in his thinking.
               </p>
             </div>
@@ -282,7 +282,7 @@ export default function Home() {
 
         {/* Second Testimonial */}
         <div className="bg-blue-600 text-white p-8 md:p-12 relative">
-          <div className="text-6xl text-white/30 absolute top-6 left-6">"</div>
+          <div className="text-6xl text-white/30 absolute top-6 left-6">&quot;</div>
           <div className="flex flex-col h-full justify-between">
             <div className="relative z-10 mb-6">
               <p className="text-lg">
@@ -301,7 +301,7 @@ export default function Home() {
 
         {/* Third Testimonial */}
         <div className="bg-purple-500 text-white p-8 md:p-12 relative">
-          <div className="text-6xl text-white/30 absolute top-6 left-6">"</div>
+          <div className="text-6xl text-white/30 absolute top-6 left-6">&quot;</div>
           <div className="flex flex-col h-full justify-between">
             <div className="relative z-10 mb-6">
               <p className="text-lg">
