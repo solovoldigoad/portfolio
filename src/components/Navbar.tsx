@@ -63,6 +63,7 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
+          {/* End Desktop Navigation */}
 
           {/* Mobile Menu Button */}
           <button
@@ -111,6 +112,7 @@ export default function Navbar() {
           </nav>
         </div>
       )}
+      {/* End Mobile Menu */}
     </header>
   )
 }
