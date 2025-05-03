@@ -40,12 +40,9 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <Link href="/" className="text-white text-2xl md:text-3xl font-bold">
-            RC<span className="text-white">.</span>_
+            RC
           </Link>
-
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
@@ -59,13 +56,10 @@ export default function Navbar() {
                 <span className={cn("text-sm mr-2", isScrolled ? "text-gray-300" : "text-gray-400")}>
                   {item.number}
                 </span>
-                <span className="group-hover:underline">// {item.label}</span>
+                <span className="group-hover:underline">`// ${item.label}`</span>
               </Link>
             ))}
           </nav>
-          {/* End Desktop Navigation */}
-
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -88,8 +82,6 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-[#0a0e17] border-t border-gray-800">
           <nav className="flex flex-col px-4 py-4">
@@ -106,13 +98,12 @@ export default function Navbar() {
                 <span className={cn("text-sm mr-2 w-8", isScrolled ? "text-gray-300" : "text-gray-400")}>
                   {item.number}
                 </span>
-                <span>// {item.label}</span>
+                <span>`// ${item.label}`</span>
               </Link>
             ))}
           </nav>
         </div>
       )}
-      {/* End Mobile Menu */}
     </header>
   )
 }

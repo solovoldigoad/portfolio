@@ -35,7 +35,7 @@ export const Compare = ({
   const sliderRef = useRef<HTMLDivElement>(null);
 
 
-  const [isMouseOver, setIsMouseOver] = useState(false);
+  // const [isMouseOver, setIsMouseOver] = useState(false);
 
   const autoplayRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -69,12 +69,10 @@ export const Compare = ({
   }, [startAutoplay, stopAutoplay]);
 
   function mouseEnterHandler() {
-    setIsMouseOver(true);
     stopAutoplay();
   }
 
   function mouseLeaveHandler() {
-    setIsMouseOver(false);
     if (slideMode === "hover") {
       setSliderXPercent(initialSliderPercentage);
     }
@@ -123,16 +121,16 @@ export const Compare = ({
     (e: React.MouseEvent) => handleMove(e.clientX),
     [handleMove]
   );
-
+  
   const handleTouchStart = useCallback(
-    (e: React.TouchEvent) => {
+    () => {
       if (!autoplay) {
         handleStart();
       }
     },
     [handleStart, autoplay]
   );
-
+  
   const handleTouchEnd = useCallback(() => {
     if (!autoplay) {
       handleEnd();
