@@ -149,7 +149,7 @@ export const Compare = ({
   return (
     <div
       ref={sliderRef}
-      className={cn(" overflow-hidden", className)}
+      className={cn(" overflow-hidden object-contain", className)}
       style={{
         position: "relative",
         cursor: slideMode === "drag" ? "grab" : "col-resize",
@@ -197,7 +197,7 @@ export const Compare = ({
           {firstImage ? (
             <motion.div
               className={cn(
-                "absolute inset-0 z-20 rounded-2xl flex-shrink-0 w-full h-full select-none overflow-hidden",
+                "absolute inset-0 z-20 rounded-2xl flex-shrink-0 w-full h-full select-none overflow-hidden ",
                 firstImageClassName
               )}
               style={{
@@ -211,7 +211,7 @@ export const Compare = ({
                 alt="first image"
                 src={firstImage}
                 className={cn(
-                  "absolute inset-0  z-20 rounded-2xl flex-shrink-0 w-full h-full select-none",
+                  "absolute top-0 left-8 inset-0 z-20 rounded-2xl flex-shrink-0 w-full h-full select-none",
                   firstImageClassName
                 )}
                 draggable={false}

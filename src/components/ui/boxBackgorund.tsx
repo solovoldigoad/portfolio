@@ -40,13 +40,13 @@ export default function GridBackgroundDemo() {
               <Compare
                 firstImage="/designer.png"
                 secondImage="/coder.png"
-                firstImageClassName="object-cover object-left-top"
-                secondImageClassname="object-cover object-left-top"
+                firstImageClassName=" object-left-top"
+                secondImageClassname=" object-left-top"
                 className=" w-full md:h-[45rem]"
                 slideMode="hover"
               />
             </div>
-            <div className="relative w-full z-20 flex flex-col gap-5 md:hidden">
+            <div className="relative w-full z-20 flex flex-col gap-10 md:hidden">
               <div className="flex">
                 <div className="flex flex-col justify-start w-50%">
                   <div className="">
@@ -79,7 +79,8 @@ export default function GridBackgroundDemo() {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+
       </div>
     </div>
   )
