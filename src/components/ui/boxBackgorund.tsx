@@ -21,7 +21,7 @@ const words = ["Web Architect","Web Creator","App Builder" ,"Full-Stack"]
 
 export default function GridBackgroundDemo() {
   return (
-    <div className="relative flex h-[50rem] md:h-[45rem] w-full items-center justify-center bg-black">
+    <div className="relative flex h-[50rem] md:h-[43rem] w-full items-center justify-center bg-black">
       <div
         className={cn(
           "absolute inset-0",
@@ -36,13 +36,13 @@ export default function GridBackgroundDemo() {
                 speed="fast"
                 />
             </div>
-            <div className=" z-20 hidden md:flex md:absolute md:top-5 md:h-full md:w-full ">
+            <div className=" z-20 hidden md:flex md:absolute md:top-[3rem] md:h-full md:w-full  ">
               <Compare
                 firstImage="/designer.png"
                 secondImage="/coder.png"
                 firstImageClassName=" object-left-top"
                 secondImageClassname=" object-left-top"
-                className=" w-full md:h-[45rem]"
+                className=" w-full md:h-[40rem]"
                 slideMode="hover"
               />
             </div>
