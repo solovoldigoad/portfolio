@@ -1,93 +1,24 @@
 'use client'
 import React  from 'react'
-import { Boxes } from "@/components/ui/background-boxes"
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-import { Compare } from "@/components/ui/compare";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
 import { Atom, Monitor, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/moving-border';
 import Navbar from '@/components/Navbar';
 import Link from "next/link"
 import { ArrowUp } from "lucide-react"
 import ExperienceSection from "@/components/experience-section";
-import { FlipWords } from '@/components/ui/flip-words';
-
 import BentoGridDemo from '@/components/bento-grid-demo';
 import Image from 'next/image';
+import GridBackgroundDemo from '@/components/ui/boxBackgorund';
 
-
-const testimonials = [
-  {
-    quote:
-      "RAMANSH",
-  },
-  {
-    quote:
-    "CHAUHAN",
-  },
-]
-
-const words = ["Web Architect","Web Creator","App Builder" ,"Full-Stack"]
 
 export default function Home() {
   return (
   <div className="flex flex-col justify-center bg-black ">
     <Navbar/>
       <div className="p-4 ">
-        <div className="h-screen relative w-full overflow-hidden bg-black flex flex-col items-center justify-center rounded-lg">
-          <div className="absolute inset-0 w-full h-full [mask-image:radial-gradient(transparent,white)] pointer-events-none bg-black" />
-          <Boxes />
-            <div className=" absolute top-16 rounded-md  antialiased  overflow-hidden z-10 md:top-24 ">
-              <InfiniteMovingCards
-                items={testimonials}
-                direction="left"
-                speed="fast"
-                />
-            </div>
-            <div className="absolute w-5/6 z-20 hidden md:flex md:h-full md:w-full rotate-2 md:mt-80">
-              <Compare
-                firstImage="/designer.png"
-                secondImage="/coder.png"
-                firstImageClassName="object-cover object-left-top"
-                secondImageClassname="object-cover object-left-top"
-                className=" w-full md:h-[700px]"
-                slideMode="hover"
-              />
-            </div>
-            <div className="absolute w-full z-20 flex flex-col gap-10 top-[300px] md:hidden">
-              <div className="flex">
-                <div className="flex flex-col justify-start w-50%">
-                  <div className="">
-                  <TextGenerateEffect words={`Designer`}className="text-center text-4xl font-bold"/>
-                  </div>
-                  <div className="text-center" >
-                    <TextGenerateEffect words={`Product designer specialising in UI design and design systems.`}className="text-2xl font-semibold" />
-                  </div>
-                </div>
-                <div className="w-50%">
-                  <Image width={700} height={700} className="" src='/DesignHalf.gif' alt=''></Image>
-                </div>
-              </div>
-            </div>
-            <div className="absolute w-full z-20 flex flex-col gap-10 top-[600px] md:hidden">
-              <div className="flex h-[300px] w-full">
-                <div className="w-[50%]">
-                  <Image width={500} height={500} className="h-full w-full" src='/coderHalf.gif' alt=''></Image>
-                </div>
-                <div className="flex flex-col gap-6 justify-start pt-10 w-[50%] ">
-                  <div  className="flex items-center">
-                      <FlipWords words={words} />
-                  </div>
-                  <div className="text-base text-white font-ProjectLine h-full  ">
-                    <p className="text-2xl text-center">
-                      Hey!<br />
-                      I&apos;m a full-stack web<br />
-                      developer who creats websites.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="h-full mt-16 relative  w-full overflow-hidden bg-black flex flex-col items-center justify-center ">
+            <GridBackgroundDemo />
         </div>
       </div>
       <div>
@@ -191,7 +122,7 @@ export default function Home() {
             <div className="flex flex-col items-end">
               {/* Arrow pointing to phone */}
               <div className='flex items-end h-full'>
-                <Image width={100} height={100} src="/arrowAnimation.gif" className="w-24 h-24 rotate-90 " alt="Arrow animation" />
+                <Image width={100} height={100} src="/arrowAnimation.gif" className="w-24 h-24 rotate-90 " alt="Arrow animation" unoptimized />
               </div>
               </div>
               {/* Phone mockup */}

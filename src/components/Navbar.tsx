@@ -40,8 +40,8 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="text-white text-2xl md:text-3xl font-bold">
-            RC
+          <Link href="/" className="text-[#3BBDC4] text-2xl md:text-3xl font-bold">
+            RC._
           </Link>
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
@@ -98,7 +98,7 @@ export default function Navbar() {
                 <span className={cn("text-sm mr-2 w-8", isScrolled ? "text-gray-300" : "text-gray-400")}>
                   {item.number}
                 </span>
-                <span>`// ${item.label}`</span>
+                <span>`// {item.label}`</span>
               </Link>
             ))}
           </nav>
